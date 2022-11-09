@@ -3,7 +3,9 @@ import { use } from "react";
 import CategoryForm from "@/components/category-form";
 
 const getCategories = async () => {
-  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/categories");
+  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/categories", {
+    cache: "no-store",
+  });
   return res.json();
 };
 
