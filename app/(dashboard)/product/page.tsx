@@ -1,5 +1,4 @@
 import ProductForm from "@/components/product-form";
-import { NextSeo } from "next-seo";
 import { use } from "react";
 
 const getCategories = async () => {
@@ -23,7 +22,6 @@ export default function ProductPage() {
   console.log(products);
   return (
     <>
-      <NextSeo title="Produk" description="Halaman Produk" />
       <div>
         <h1 className="font semibold text-2xl">Add Product</h1>
         <ProductForm categories={categories} />

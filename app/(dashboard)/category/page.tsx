@@ -1,6 +1,5 @@
 import CategoryForm from "@/components/category-form";
 import DeleteButton from "@/components/delete-button";
-import { NextSeo } from "next-seo";
 import { use } from "react";
 
 const getCategories = async () => {
@@ -15,7 +14,6 @@ export default function CategoryPage() {
 
   return (
     <>
-      <NextSeo title="Kategori" description="Halaman Kategori" />
       <div>Tambah Kategori</div>
       <CategoryForm />
       {/* create a table that only show 5 datas per page */}
