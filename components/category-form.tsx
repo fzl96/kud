@@ -9,7 +9,6 @@ export default function CategoryForm() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    console.log("test");
     const res = await fetch(
       process.env.NEXT_PUBLIC_API_URL + "/api/categories",
       {
@@ -21,7 +20,6 @@ export default function CategoryForm() {
       }
     );
     const data = await res.json();
-    console.log(data);
     router.refresh();
     setName("");
   };

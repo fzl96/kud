@@ -1,6 +1,7 @@
 import { use } from "react";
 
 import CategoryForm from "@/components/category-form";
+import DeleteButton from "@/components/delete-button";
 
 const getCategories = async () => {
   const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/categories", {
@@ -16,13 +17,26 @@ export default function CategoryPage() {
     <div>
       {/* <div>test</div> */}
       <CategoryForm />
-      <ul>
-        {categories.length != 0
-          ? categories.map((category: { id: string; name: string }) => (
-              <li key={category.id}>{category.name}</li>
-            ))
-          : ""}
-      </ul>
+      {/* create a table that only show 5 datas per page */}
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {categories.map((category: { id: string; name: string }) => (
+            <tr key={category.id}>
+              <td>{category.name}</td>
+              <td>
+                <button>Edit</button>
+                <DeleteButton id={category.id} />
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
