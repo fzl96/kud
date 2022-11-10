@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { FiTruck } from "react-icons/fi";
 import { GiExpense } from "react-icons/gi";
+import { HiOutlineUsers } from "react-icons/hi";
 import { MdGridView, MdOutlineSpaceDashboard } from "react-icons/md";
 // import react-icons type definition
 import { IconType } from "react-icons/lib";
@@ -19,6 +20,7 @@ export const icons = {
   dashboard: <MdOutlineSpaceDashboard />,
   category: <BiCategory />,
   product: <MdGridView />,
+  member: <HiOutlineUsers />,
   supplier: <FiTruck />,
   pengeluaran: <GiExpense />,
   pembelian: <FaDownload />,

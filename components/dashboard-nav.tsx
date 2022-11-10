@@ -27,6 +27,11 @@ const masterNavigationItems: NavigationItem[] = [
     icon: icons.product,
   },
   {
+    label: "Member",
+    href: "/member",
+    icon: icons.member,
+  },
+  {
     label: "Supplier",
     href: "/supplier",
     icon: icons.supplier,
@@ -48,11 +53,6 @@ const transactionNavigationItems: NavigationItem[] = [
     label: "Penjualan",
     href: "/penjualan",
     icon: icons.penjualan,
-  },
-  {
-    label: "Transaksi Lama",
-    href: "/transaksi_lama",
-    icon: icons.transaksi_lama,
   },
   {
     label: "Transaksi Baru",

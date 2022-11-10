@@ -1,3 +1,10 @@
+import { NextSeo } from "next-seo";
+
 export default function SupplierPage() {
-  return <div>SupplierPage</div>;
+  return (
+    <>
+      <NextSeo title="Supplier" description="Halaman Supplier" />
+      <div>SupplierPage</div>
+    </>
+  );
 }

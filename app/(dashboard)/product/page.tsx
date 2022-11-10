@@ -1,4 +1,5 @@
 import ProductForm from "@/components/product-form";
+import { NextSeo } from "next-seo";
 import { use } from "react";
 
 const getCategories = async () => {
@@ -21,35 +22,38 @@ export default function ProductPage() {
 
   console.log(products);
   return (
-    <div>
-      <h1 className="font semibold text-2xl">Add Product</h1>
-      <ProductForm categories={categories} />
-      {/* create a table for products */}
-      <table className="w-full">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Product</th>
-            <th>Category</th>
-            <th>Price</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {products.map((product: any) => (
-            <tr key={product.id}>
-              <td>{product.id}</td>
-              <td>{product.name}</td>
-              <td>{product.category.name}</td>
-              <td>{product.price}</td>
-              <td>
-                <button>Edit</button>
-                <button>Delete</button>
-              </td>
+    <>
+      <NextSeo title="Produk" description="Halaman Produk" />
+      <div>
+        <h1 className="font semibold text-2xl">Add Product</h1>
+        <ProductForm categories={categories} />
+        {/* create a table for products */}
+        <table className="w-full">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {products.map((product: any) => (
+              <tr key={product.id}>
+                <td>{product.id}</td>
+                <td>{product.name}</td>
+                <td>{product.category.name}</td>
+                <td>{product.price}</td>
+                <td>
+                  <button>Edit</button>
+                  <button>Delete</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
