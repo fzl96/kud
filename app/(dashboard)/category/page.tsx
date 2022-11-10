@@ -15,10 +15,10 @@ export default function CategoryPage() {
 
   return (
     <div>
-      {/* <div>test</div> */}
+      <div>Tambah Kategori</div>
       <CategoryForm />
       {/* create a table that only show 5 datas per page */}
-      <table>
+      <table className="w-full">
         <thead>
           <tr>
             <th>Category</th>
