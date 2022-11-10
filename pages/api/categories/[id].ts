@@ -5,7 +5,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id } = req.query
   if (req.method === "GET") {
     const category = await prisma.category.findUnique({
-      where: { id: id },
+      where: { id: { in: id} },
     });
     res.json(category);
   } else if (req.method === "PUT") {
