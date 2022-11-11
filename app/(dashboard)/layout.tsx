@@ -1,6 +1,4 @@
 import DashboardNav from "@/components/dashboard-nav";
-import { Suspense } from "react";
-import Loading from "./loading";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -12,9 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </aside>
 
-        <Suspense fallback={<Loading />}>
-          <main>{children}</main>
-        </Suspense>
+        <main>{children}</main>
       </div>
     </>
   );

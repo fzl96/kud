@@ -15,8 +15,12 @@ const getProducts = async () => {
 };
 
 export default async function ProductPage() {
-  const categories = await getCategories();
-  const products = await getProducts();
+  // const categories = await getCategories();
+  // const products = await getProducts();
+  const [categories, products] = await Promise.all([
+    getCategories(),
+    getProducts(),
+  ]);
 
   return (
     <>
