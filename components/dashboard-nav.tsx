@@ -1,6 +1,7 @@
 "use client";
 
 import { icons } from "@/components/icons";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -119,7 +120,9 @@ export default function DashboardNav() {
           </h1>
           {category.navigationItems.map((item, index) => (
             <Link key={index} href={item.href}>
-              <div
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className={`mb-3 px-3 py-2 rounded  ${
                   active(item.href)
                     ? "bg-[#16161a] text-white"
@@ -130,7 +133,7 @@ export default function DashboardNav() {
                   {item.icon}
                   <span className="text-base">{item.label}</span>
                 </span>
-              </div>
+              </motion.div>
             </Link>
           ))}
         </div>

@@ -12,7 +12,7 @@ export default async function CategoryPage() {
   const categories = await getCategories();
 
   return (
-    <>
+    <div>
       <div>Tambah Kategori</div>
       <CategoryForm />
       {/* create a table that only show 5 datas per page */}
@@ -35,6 +35,6 @@ export default async function CategoryPage() {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }
