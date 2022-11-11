@@ -1,19 +1,17 @@
-import MemberForm from "@/components/member-form";
-
-const getMembers = async () => {
-  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/members");
-  return res.json();
-};
+// const getMembers = async () => {
+//   const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/members");
+//   return res.json();
+// };
 
 export default async function MemberPage() {
-  const members = await getMembers();
+  // const members = await getMembers();
   return (
     <>
       <div>
         <h1 className="text-2xl font-semibold">MemberPage</h1>
-        <MemberForm />
+        {/* <MemberForm /> */}
 
-        <div className="mt-5">
+        {/* <div className="mt-5">
           <h1 className="text-2xl font-semibold">Member List</h1>
           <div className="mt-5">
             <table className="w-full">
@@ -48,7 +46,7 @@ export default async function MemberPage() {
               </tbody>
             </table>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
