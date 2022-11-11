@@ -24,3 +24,26 @@ model Product {
   category   Category @relation(fields: [categoryId], references: [id])
   categoryId String
 }
+
+// create a new model for member
+model Member {
+  id      String @id @default(cuid())
+  name    String
+  address String
+  phone   String
+}
+
+model Supplier {
+  id      String @id @default(cuid())
+  name    String
+  address String
+  phone   String
+}
+
+model Expenses {
+  id      String   @id @default(cuid())
+  name    String
+  amount  Int
+  date    DateTime
+  updated DateTime
+}

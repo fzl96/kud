@@ -1,6 +1,5 @@
 import CategoryForm from "@/components/category-form";
 import DeleteButton from "@/components/delete-button";
-import { use } from "react";
 
 const getCategories = async () => {
   const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/categories", {
@@ -9,8 +8,8 @@ const getCategories = async () => {
   return res.json();
 };
 
-export default function CategoryPage() {
-  const categories = use(getCategories());
+export default async function CategoryPage() {
+  const categories = await getCategories();
 
   return (
     <>

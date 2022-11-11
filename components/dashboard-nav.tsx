@@ -122,7 +122,7 @@ export default function DashboardNav() {
               <div
                 className={`mb-3 px-3 py-2 rounded  ${
                   active(item.href)
-                    ? "bg-[#ebeff2] text-black"
+                    ? "bg-[#16161a] text-white"
                     : "text-gray-500 hover:bg-[#ebeff2] hover:text-black"
                 }`}
               >
