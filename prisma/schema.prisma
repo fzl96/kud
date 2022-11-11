@@ -39,11 +39,3 @@ model Supplier {
   address String
   phone   String
 }
-
-model Expenses {
-  id      String   @id @default(cuid())
-  name    String
-  amount  Int
-  date    DateTime
-  updated DateTime
-}
